@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+
+    <!-- linkando google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">    
+
+    <!-- chamada da CDN Font Awsome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- linkando tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        white: '#ffffff',
+                        lightGrey: '#F2F2F2',
+                        mediumGrey: '#C2C2C2',
+                        lightBlue: '#2A84D8',
+                        darkBlue: '#112B4A',
+                        hoverBlue: '#245B9B'
+                    },
+                    fontFamily: {
+                        inter: ['Inter', 'sans-serif']
+                    },
+                    borderRadius: {
+                        medium: '25px'
+                    },
+                    lineHeight: {
+                        'very-tigth': '1.2'
+                    },
+                    borderWidth: {
+                        DEFAULT: '1px',
+                        '1':'1px'
+                    },
+                    spacing: {
+                        '1px':'1.0px'
+                    },
+                    height: {
+                        '0.5':'0.5px'
+                    }                    
+                }
+            }
+        }
+    </script>    
+</head>
+<body class="font-inter flex justify-center items-center h-screen">
+    
+    <!-- top starts -->
+    <div class="max-w-5xl m-auto">
+        <div class="flex flex-col items-center">
+            <img class="w-24 my-6 hover:animate-bounce" src="./assets/images/logo.svg" alt="">
+            <p class="text-darkBlue">O primeiro passo para um futuro mais feliz!</p>
+            <p class="text-2xl font-semibold text-darkBlue mt-10 mb-6">Login</p>
+
+    <!-- top ends -->            
+
+    <!-- login starts -->
+            <form class="flex flex-col">
+                <label class="text-xs text-darkBlue" for="Email">E-mail</label>
+                <input class="text-sm w-80 mb-2 py-2 rounded border-1 border-darkBlue focus:outline-darkBlue" type="text">
+                <label class="text-xs text-darkBlue" for="Email">Senha</label>
+                <input class="text-sm w-80 mb-2 py-2 rounded border-1 border-darkBlue focus:outline-darkBlue" type="text">
+                <button class="text-xs text-darkBlue mb-1 mr-auto">Esqueceu sua senha?</button>
+                <button class="text-sm w-80 h-10 mb-1 bg-lightBlue py-2 rounded text-white hover:bg-hoverBlue duration-300" type="text">Entrar</button>
+            </form>
+            <div class="w-80 flex items-center justify-between opacity-50 mb-1">
+                <div class="bg-gray-500 w-full h-0.5"></div>
+                <p class="text-xs text-gray-500 mx-2">ou</p>
+                <div class="bg-slate-500 w-full h-0.5"></div>
+            </div>
+                <button class="text-sm w-80 h-10 mb-1 rounded border-1 border-darkBlue focus:outline-darkBlue mb-2 justify-center relative" type="text"><img class="w-4 absolute ml-3 z-1" src="./assets/images/google.png" alt="">Login com Google</button>
+            <button class="text-sm w-80 h-10 mb-1 rounded border-1 border-darkBlue focus:outline-darkBlue mb-2 relative" type="text"><img class="w-4 absolute ml-3 z-1" src="./assets/images/apple.png" alt="">Login com a Apple</button>
+            <button class="text-xs text-darkBlue mb-1">Não tem uma conta? Registre-se</button>
+
+    <!-- login ends -->
+        </div>    
+    </div>
+
+
+</body>
+</html>
